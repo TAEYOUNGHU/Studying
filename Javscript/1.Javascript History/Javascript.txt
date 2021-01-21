@@ -1,0 +1,74 @@
+Javascript 의 역사
+
+1993 UI 요소가 더해진 Mosaic Web Browser 출시
+
+Marc Andreessen 에 의해 Netscape Navigator 출시
+
+HTML , CSS 간단한 웹페이지만 만들수있었음 Hyper Text  
+
+페이지와 페이지사이의 이동만 가능한 정적인 웹사이트만 가능
+
+동적인 웹사이트를 어떻게하면 만들수있을까?  Marc Andreessen 고민
+
+Java - 웹사이트 개발하던 개발자들에게 다소 어렵고 무거워서 pass
+
+Scheme - 기존의 언어를 변형 (Brendan Eich 개발자)
+
+Marc Andreessen + Brendan Eich = LiveScript -> Javascript 출시
+
+
+
+1995 년 Microsoft 에서 Reverse Engineering 통해 JScript 출시
+
+1996 년에는 JScript , Javascript 때문에 개발자들이 고통받음
+
+1996 년 11월 ECMA International 제안 
+
+1997 년 7월 ECMAScript1 출시
+
+1998 년 ECMAScript2 
+
+1999 년 ECMAScript3 === error handling
+
+2000 년 ECMAScript4 === Class
+
+2000 년 Microsoft InternetExplorer 점유율 95% 이상차지 불만제기
+
+2000 년 Microsoft InternetExplorer 은 ECMAScript 에 표준안에 참가하지않음.
+
+2004 년 moz://a 에서 Firefox 출시 표준화를 앞두고 3사에 치열한 신경전 벌어짐 (Micro , moz , Net)
+
+2004 년 Jesse James Garrett 으로 인해 (AJAX) 도입
+
+2004 년 개발자들의 커뮤니티 형성 라이브러리 출시 *** Jquery *** , Dojo , mootools
+
+2008 년 Google 에서 Chrome 출시 Just-in-time compilation (JIT) 강력한 검색엔진이 포함된 브라우저 -> Javascript 동작빠름
+
+2008 년 Chrome 등장으로 다른브라우저들도 성능개선 해야겠다는생각이듬
+
+2009 년 브라우저들개발자들이 생산적 대화 서로 도와주기 시작하고 ECMAScript 5 출시
+
+2015 년 ECMAScript 6 출시 -> default parameter , class , arrow function , const , let
+
+Javascript Engines - > ECMA 표준안을 따라가는 엔진존재
+
+Chrome - V8, Firefox - SpiderMonkey, Safari - JSCore, MSEdge - Chakra, Opera-Carakan
+
+2020 년 2월 Microsoft Edge - V8 엔진 대채해서 사용
+
+최신 버전으로 ECMA Script 를 사용해서 BABEL을 이용해서 ECMA5,ECMA6로 변환해서 변환된코드를 생성해줌
+
+SPA - Single Page Application 
+
+Javascript의 라이브러리 - React , Angular , Vue 등장
+
+Node js 이용해 [ back-end 서비스구현, React Native 모바일, Eletron 데스크탑 ]
+
+
+
+
+
+
+
+
+

@@ -10,6 +10,8 @@
 
 >3. 리액트 컴포넌트,라우터,Hook 를 공부한내용입니다.
 
+>4. index.html 파일에 Chrome Dev Tool을 이용하세요.
+
 
 
 >	>Markdown 기반언어로 만들어진 문서입니다.

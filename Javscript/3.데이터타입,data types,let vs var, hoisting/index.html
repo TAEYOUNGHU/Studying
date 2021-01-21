@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 데이터타입,data types,let vs var, hoisting </title>
+</head>
+<body>
+
+    <script>
+        
+        // 프로그래밍언어에서 제일중요하게생각하는건 ? 
+        // RE: 입력 , 연산 , 출력
+        // CPU에 최적화 된 연산이필요함.
+
+        // 1. Use strict
+        // added in ES 5
+        // use this for Valina Javascript
+
+        // 2. Variable (변수), rw (read/write)
+        // let (added in ES6)
+        
+        let globalName = 'global name'; // Global Scope 
+        // 메모리에 항상 탑재되어있음 최소한으로 쓰는게좋음
+        // 클래스,함수,if,for 필요한 부분에서만 정의해서 쓰는게좋음
+
+        {
+            let name = 'taeyoung';
+            console.log(name);
+            name = 'hello';
+            console.log(name);
+            console.log(globalName);
+        }
+        console.log(name);
+        console.log(globalName);
+
+        // var (don't ever use this)
+        // var hoisting (어디에 선언했냐에 상관없이 끌어올려줌)
+        // has no block scope
+        {
+            age = 4;
+            var age;
+        }
+        console.log(age);
+
+        // 3. Constant, r(read only)
+        const daysInWeek = 7;
+        const maxNumber = 5;
+
+        // Note!
+        // Immutable data types: premitive types, frozen objects (i.e.object.freeze())
+        // Mutable data types: all object by default are mutable in JS
+        // favor immutable data type always for a few reasons:
+        // - security
+        // - thread safety
+        // - reduce human mistakes
+
+        // 4. Variable types
+        // primitive, single item: number, string, boolean, null, undefiedn, symbol
+        // object, box container
+        // function, first-class function? 변수에할당가능함 인자로전달 리턴가능
+
+        const count = 17; // integer
+        const size = 17.1; // decimal number
+        console.log(`value: ${count}, type:${typeof count}`);
+        console.log(`value: ${size}, type:${typeof size}`);
+        // literal
+
+        //number - special numeric values: infinity, -infinity, NaN
+        const infinity = 1 / 0;
+        const negativeInfinity = -1 / 0;
+        const nAn = 'not a nuber' / 2;
+        console.log(infinity);
+        console.log(negativeInfinity);
+        console.log(nAn);
+
+        // bigInt (fairly new, don't use it yet)
+        const bigInt = 123151591951591915915195159n;
+        console.log(`value: ${bigInt}, type: ${typeof bigInt}`);
+
+        // string
+        const char = 'c';
+        const brendan = 'brendan';
+        const greeting = 'hello' + brendan;
+        console.log(`value: ${greeting}, type:${typeof greeting}`);
+        const helloBob = `hi ${brendan}!`; // template literals (string)
+
+        // boolean
+        // false: 0, null, undefined, NaN, ''
+        // true : any other value
+        const canRead = true;
+        const test = 3 < 1; // false
+        console.log(`value: ${canRead}, type:${typeof canRead}`);
+
+        // null
+        let nothing = null;
+        console.log(`value:${nothing}, type:${typeof nothing}`);
+
+        // undefined
+        let x;
+        console.log(`value: ${x}, type: ${typeof X}`);
+
+        // symbol, create unique identifiers for objects
+        // 고유한 식별자를 만들때 사용함.
+        const symbol1 = Symbol('id');
+        const symbol2 = Symbol('id');
+        console.log(symbol1 === symbol2);
+        const gSymbol1 = Symbol.for('id');
+        const gSymbol2 = Symbol.for('id');
+        console.log(gSymbol1 === gSymbol2);
+
+        //object 
+        const taeyoung = {name : 'taeyoung' , age : 26};
+        taeyoung.age = 27;
+        console.log(taeyoung.age);
+
+
+        //5. Dynamic typing : dynamically typed language
+        let text = 'hello';
+        console.log(text.charAt(0)); // h 출력
+        console.log(`value: ${text}, type: ${typeof text}`);
+        text = 1;
+        console.log(`value: ${text}, type: ${typeof text}`);
+        text = '7' + 5;
+
+        console.log(`value: ${text}, type: ${typeof text}`);
+        // string + string = 75\
+        text = '7' / + '2';
+        console.log(`value: ${text}, type: ${typeof text}`);
+        // number + number = 3.5
+        // console.log(text.charAt(0)); 다시 숫자로 할시 Error 발생 -> TypeScript 존재이유
+
+
+    </script>
+    
+</body>
+</html>

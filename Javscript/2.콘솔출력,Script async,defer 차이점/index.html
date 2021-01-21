@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콘솔출력,Script async와 defer의 차이점</title>
+</head>
+<body>
+    <script>
+
+        /*  API란? Application Programing Interface 약자
+         Web API 는 Javascript 안에 내장되있지않다.
+         Web API 브라우저가 제공하는 , 이해할수있는 함수들 */
+
+         // 간단한 Javascript 동작은 Chrome 의 DevTools 를 활용하자
+         // Dev Tools 의 Sources Tap은 디버깅할때 유용하게씀
+
+         // Javascript 의 공식사이트 ECMA
+         // MDN 간단하게 잘 정리되어있다.
+
+         // DOM
+        
+         // body 끝에 script
+         // pasing HTML -> fetching js -> executing js
+         // 장점 : 사용자가 기본적HTML 빠르게볼수있음.
+         // 단점 : Javascript가 의존적인컨텐츠라면 기다려야함.
+
+         // head + async
+         // parsing HTML -> fetching js -> executing js -> parsing HTML
+         // 장점 : 다운로드받는시간을 절약할수있다. 
+         // 단점 : 사용자가 페이지를보는데 시간이 걸릴수있다 , 순서적이지않음 다운받은대로 실행
+
+         // head + defer
+         // parsing HTML -> fetching js -> excuting js
+         // 명령만 시켜놓고 HTML을 parsing함
+         // 장점 : 제일좋긴한데 때에 따라서 다름. 순서대로 실행
+
+         
+         // Javascript is very flexible
+         // flexible === dangerous
+         // added ECMAScript 5
+         
+         'use strict';
+         //사용하는이유? 실행하는데에 성능개선까지할수있음.
+         
+         console.log('Hello Wolrd');
+         
+         let a;
+         a = 6;
+         
+    </script>
+</body>
+</html>
