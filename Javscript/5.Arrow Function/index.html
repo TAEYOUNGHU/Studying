@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Arrow Function</title>
+</head>
+<body>
+    <script>
+
+        // Function (함수)
+        // - 빌딩블록으로 구성되있음
+        // - 재사용가능
+        // - 값을계산 , 한가지에 테스크
+
+        // 1. Function declaration
+        // function name (param1, param2){ body... return;}
+        // one function === one thing
+        // naming: doSomething, command, verb
+        // e.g. createCardAndPoint -> createCard, createPoint
+        // function is object in JS { 함수는 오브젝트 형태이다. }
+
+        function printHello(){
+            console.log('Hello');
+        }
+        printHello();
+
+        function log(message){
+            console.log(message);
+        }
+        log('Hello@');
+        log(1234);
+
+        // 2. Parameters
+        // premitive parameters: passed by value
+        // object parameters : passed by reference
+        function changeName(obj){
+            obj.name = 'coder';
+        }
+        const taeyoung = {name : 'taeyoung'};
+        changeName(taeyoung);
+        console.log(taeyoung);
+
+    </script>
+</body>
+</html>

@@ -7,6 +7,175 @@
 </head>
 <body>
     <script>
+        
+        // 1. String concatenation (문자 연결)
+        console.log('my' + 'cat'); //문자 + 문자
+        console.log('1' + 2); // 문자 + 숫자
+        console.log(`string literals:1 + 2 = ${1+2}`) // 스프링 리터럴 `` 백틱사용
+        console.log("taeyoung's \n\ book");
+
+        // 2. Numeric operators (숫자 연산자)
+        console.log(1 + 1); // add
+        console.log(1 - 1); // substract
+        console.log(1 / 1); // divide
+        console.log(1 * 1); // multiply
+        console.log(5 % 2); // remainder
+        console.log(2 ** 3); // expnentiation
+
+        // 3. Increment and decrement operators
+        let counter = 2;
+
+        const preIncrement = ++counter;
+        // counter = counter + 1;
+        // preIncrement = counter;
+        console.log(`preIncrement:${preIncrement}, counter:${counter}`);
+
+        const postIncrement = counter++;
+        // postIncrement = counter;
+        // counter = counter + 1;
+        console.log(`postIncrement:${preIncrement}, counter:${counter}`);
+        
+        // 4. Assignment operators
+        let x = 3;
+        let y = 6;
+        x += y; // x=x + y;
+        x -= y;
+        x *= y;
+        x /= y;
+
+        // 5. Comparison operators
+        console.log(10 < 6);
+        console.log(10 <= 6);
+        console.log(10 > 6);
+        console.log(10 >= 6);
+    
+        // 6. Logical operators: || (or), && (and), ! (not) (논리 연산자)
+        const value1 = true;
+        const value2 = 4 < 2;
+
+        // || (or) 하나라도 true가 나오면 멈춘다.
+        console.log(`or: ${value1 || value2 || check()}`);
+
+        // && (and), finds the first falsy value , 3개가 전부다 true가 되야 실행됨
+        console.log(`and:${value1 && value2 && check()}`);
+
+        function check(){
+            for (let i=0; i<10; i++){
+                //wasting time
+                console.log('★');
+            }
+            return true;
+        }        
+
+        // ! (not)
+        console.log(!value1);
+
+        // 7. Equality (==, ===)
+        const stringFive = '5';
+        const numberFive = 5;
+
+        // == loose equality, withe type conversion
+        console.log(stringFive == numberFive);
+        console.log(stringFive != numberFive);
+
+        // === strict equality, no type conversion  , 타입을 신경써서 넌달라 라고말하는거
+        //strict equailty 로 코딩하는게 엄청좋다.
+        console.log(stringFive === numberFive);
+        console.log(stringFive !== numberFive);
+
+        // object equality by reference
+        const taeyoung1 = { name: 'taeyoung'};
+        const taeyoung2 = { name: 'taeyoung'};
+        const taeyoung3 = taeyoung1;
+        console.log(taeyoung1 == taeyoung2); //false
+        console.log(taeyoung1 === taeyoung2); //false not reference value = false
+        console.log(taeyoung1 === taeyoung3); //true
+
+        // equality - puzzler
+        console.log(0 == false); // true
+        console.log(0 === false); // false
+        console.log('' == false); // true
+        console.log('' === false); // false
+        console.log(null == undefined); // true
+        console.log(null === undefined); // false
+
+        // 8.Conditional operators: if (조건 연산자)'
+        // if, else if,else
+        const name ='taeyoung';
+        if (name === 'taeyoung'){
+            console.log('Welcome, taeyoung!');
+            } else if (name === 'coder'){
+                console.log('You are amazing coder');
+            } else {
+                console.log('unkwnon');
+            }
+
+        // 9. Ternary operator: ? (삼항 연산자)
+        // condition ? value1 : value2;
+        console.log(name === 'taeyoung' ? 'yes' : 'no');
+
+        // 10. Swith statement (스위치문)
+        const browser = 'Chrome';
+        switch (browser) {
+                case 'IE':
+                    console.log('go aaway!');
+                    break;
+                case 'Chrome':
+                case 'Firefox':
+                    console.log('love you!');
+                    break;
+                default:
+                    console.log('same all!');
+                    break;
+            }
+
+        // 11. Loops (반복문)
+        // while
+        let i=3;
+        while (i > 0){
+            console.log(`while: ${i}`);
+            i--;
+        }
+
+        // do while loop
+        do {
+            console.log(`do while: ${i}`);
+            i--;
+        } while (i > 0);
+
+        // fot loop, for(begin; condition; step)
+        for (i =3; i>0; i--){
+            console.log(`for:${i}`);
+        }
+
+        for (let i=3; i>0; i=i - 2){
+            //inline variable declaration
+            console.log(`inline variable for: ${i}`);
+        }
+
+        // nested loops 최적화에 도움이안된다. 제곱으로생각하면됨
+        for (let i=0; i<10; i++){
+            for (let j=0; j<10; j++){
+                console.log(`i:${i}, j:${j}`);
+            }
+        }
+
+        // break , continue
+
+        // Q1
+        for (let i=0; i<11; i++){
+            if (i % 2 === 0){
+            console.log(`q1. ${i}`);
+            }
+        }
+
+        // Q2
+        for (let i=0; i<11; i++){
+            if(i>8){
+                break;
+            }
+            console.log(`q2. ${i}`);
+        }
 
     </script>
 </body>
