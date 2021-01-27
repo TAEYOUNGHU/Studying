@@ -34,13 +34,115 @@
         // 2. Parameters
         // premitive parameters: passed by value
         // object parameters : passed by reference
-        function changeName(obj){
-            obj.name = 'coder';
+        
+        function chageName(obj){
+            obj = 'coder'
         }
-        const taeyoung = {name : 'taeyoung'};
-        changeName(taeyoung);
+        const taeyoung = { name : 'taeyoung'};
+        chageName(taeyoung);
         console.log(taeyoung);
+        
+        // 3. Default parameters (added in ES6)
+        function showMessage(message,from = 'unknow'){
+            console.log(`${message} by ${from}`);
+        }
+        showMessage('Hi');
 
+        //4. Rest parameters (added in ES6)
+        function printAll(...args){
+            for (let i=0; i<args.length; i++){
+                console.log(args[i]);
+            }
+
+            // for in oprators  
+            for (const arg of args){
+                console.log(arg);
+            }
+
+            // forEach
+            args.forEach((arg) => console.log(arg));
+        }
+        printAll('dream' , 'conding' , 'taeyoung');
+
+        // 5. Local scope
+        let globalMessage = 'global'; //global variable 
+        function printMessage(){ 
+            let message = 'hello'; //local variable
+            console.log(message);
+            console.log(globalMessage);
+        }
+
+        printMessage();
+
+        // 6. Retrun value
+        function sum(a,b){
+            return a+b;
+        }
+
+        const result = sum(6,4); //10
+        console.log(`sum : ${sum(6,4)} `);
+
+        // 7. Early return, early exit
+        // bad
+        function upgradeUser(user){
+            if (user.point > 10){
+                // long upgrade logic...
+            }
+        }
+
+        // good
+        function upgradeUser(user){
+            if (user.point <= 10){
+                return;
+            }
+            // long upgrade logic...
+        }
+
+        // Callback function using function 
+        function randomQuiz(answer,printYes,printNo){
+            if(answer === 'love you'){
+                printYes();
+            } else {
+                printNo();
+            }
+        }
+
+        // 익명함수 쓰여짐
+        const printYes = function(){
+            console.log('yes');
+        };
+
+        // 이름있는 함수쓰여짐
+        const printNo = function print(){
+            console.log('no');
+        };
+
+        randomQuiz('wrong',printYes,printNo);
+        randomQuiz('love you',printYes,printNo);
+
+        // Arrow function
+        // always anonymous
+        const simplePrint = function (){
+            console.log('simplePrint!');
+        };
+
+        // Arrow function
+        // const simplePrint = () => console.log('simplePrint!');
+        const add = (a,b) => a + b;
+        const simepleMultiply = (a, b) => {
+            // do something
+            return a * b;
+        };
+
+        //IIFE 함수 바로실행
+        (function hello(){
+            console.log('IIFE');
+        })();
+
+
+
+        
+        
     </script>
 </body>
 </html>

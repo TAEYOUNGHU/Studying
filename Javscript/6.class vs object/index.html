@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 와 object , 객체지향 언어 클래스 정리</title>
+</head>
+<body>
+    <script>
+        //  class person {
+        //      name; 속성(field)
+        //      age;  속성(field)
+        //      speak();  행동(methods)
+        //  }
+        
+        // class = field , methods
+        
+        // Class
+        // - templete
+        // - declare once
+        // - no data in
+
+        // Object
+        // - instance of a class
+        // - created many time
+        // - data in
+
+        // 1. Class declarations
+        class Person {
+            //constructor
+            constructor(name,age){
+            //fields
+            this.name = name;
+            this.age = age;
+            }
+
+            //methods
+            speak (){
+                console.log(`${this.name} : hello!`);
+            }
+        }
+
+        const taeyoung = new Person('taeyoung',20);
+        console.log(taeyoung.name);
+        console.log(taeyoung.age);
+        taeyoung.speak();
+
+        // 2. Getter and setters
+        class User {
+            constructor(firstName,lastName,age){
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+        }
+
+        const user1 = new User('Steve','Job','-1');
+        console.log(user1.age);
+    </script>
+</body>
+</html>
