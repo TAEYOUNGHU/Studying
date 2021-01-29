@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+
+        // 1. Object 
+        // one of the Javascript's data types
+        // object = { key : value };
+
+        //object make
+        const obj1 = {}; // 'object literal' syntax
+        const obj2 = new Object(); // 'object constructor' syntax
+        
+        function print(person){
+             console.log(person.name);
+             console.log(person.age);
+         }
+
+        const taeyoung = {
+             name : 'taeyoung',
+             age : 4
+         }
+
+        print(taeyoung);
+        //Java script no class make Object
+
+        taeyoung.hasJob = true;
+        console.log(taeyoung.hasJob);
+        // 이런방식으로 코딩하면 안됨 ( 유지보수가 힘듬 )
+
+        delete taeyoung.hasJob;
+        // 이런방식으로 삭제도 가능함 ( 유지보수가 힘듬 )
+
+        // 2. Computed properties
+
+        console.log(taeyoung.name);
+        console.log(taeyoung['name']); // 배열에서 받아오는것도 가능하다. key는 string types로 가능 , 거의 실시간값으로씀
+        taeyoung['hasJob'] = true;
+        console.log(taeyoung.hasJob);
+
+        function printValue(obj,key){
+            console.log(obj[key]);
+        }
+
+        printValue(taeyoung,'name');
+        printValue(taeyoung,'age');
+
+        // 3. Property Value shorthand
+        const person = { name : 'bob' , age : 24};
+        const person2 = { name : 'kim' , age : 26};
+        const person3 = { name : 'joe' , age : 16};
+        const person4 = new Person('taeyoung',30);
+        console.log(person4);
+
+        function Person(name,job){
+                this.name = name;
+                this.age = age;
+        }   
+        
+
+    </script>
+</body>
+</html>
